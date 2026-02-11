@@ -1,0 +1,3 @@
+compilation of (first draft mostly, and alternative) solutions to excercises from Python books.
+mostly for practice purposes.
+
