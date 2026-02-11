@@ -15,5 +15,5 @@ class CityTestCase(unittest.TestCase):
         cities = city_country("santiago", "chile", "500000")
         self.assertEqual(cities, "Santiago, Chile - population 500000")
 
-
+            
 unittest.main()
