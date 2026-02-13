@@ -1,0 +1,11 @@
+some of the question or excercises that might be worth have in mind diferences in the process of solving
+or displaying a similar output, or that bring up an interesting point.
+
+10. ctrl-c or equivalent to exit an infinite loop on the terminal.
+
+11. break to get out of a loop continue to jump back to the start.
+
+12. it gives the exact same result 0-9 
+
+14. spam.bacon() => would be the correct way to make that call function
+
