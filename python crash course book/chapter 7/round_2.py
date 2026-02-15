@@ -1,5 +1,5 @@
 # 7.4 pizza toppings
-pizza_toppings =[]
+pizza_toppings = []
 flag = True
 print("to finish your order please type 'quit' : ")
 while flag:
@@ -14,9 +14,9 @@ for topping in pizza_toppings:
 
 # 7.5 movie tickets
 age = int(input("what's your age ? : "))
-if age <3:
+if age < 3:
     print(f"the ticket is free")
-elif age <13:
+elif age < 13:
     print(f"the ticket is 10$")
 else:
     print(f"the ticket is 15$")
@@ -26,9 +26,9 @@ else:
 want_more_tickets = True
 while want_more_tickets:
     age = int(input("type your age to get a tikcet price : "))
-    if age <3:
+    if age < 3:
         print(f"the ticket is free")
-    elif age <13:
+    elif age < 13:
         print(f"the ticket is 10$")
     else:
         print(f"the ticket is 15$")
@@ -37,5 +37,36 @@ while want_more_tickets:
         want_more_tickets = False
 
 # 7.7 infinity
-while True:
- print(f"i've got the infinity stones...")
+# while True:
+#    print(f"i've got the infinity stones...")
+
+# 7.8 Deli
+sandwiches_order = ["cheese sandwich", "tuna sandwich",
+                    "bolognese sandwich", "chicken sandwich"]
+finished_sandwiches = []
+
+while sandwiches_order:
+    current_sandwich = sandwiches_order.pop()
+    print(f"making order : {current_sandwich}")
+    finished_sandwiches.append(current_sandwich)
+
+print(f"The following sandwiches order are ready...")
+for sandwich in finished_sandwiches:
+    print(sandwich)
+
+# 7.9 No pastrami
+sandwiches_order = ["pastrami", "cheese sandwich", "pastrami", "tuna sandwich",
+                    "bolognese sandwich", "chicken sandwich", "pastrami"]
+ready_sandwiches = []
+print(f"We're sorry, we run out of pastrami.")
+while "pastrami" in sandwiches_order:
+    sandwiches_order.remove("pastrami")
+
+while sandwiches_order:
+    current_sandwich = sandwiches_order.pop()
+    print(f"making order : {current_sandwich}")
+    ready_sandwiches.append(current_sandwich)
+
+print(f"The following sandwiches order are ready...")
+for sandwich in ready_sandwiches:
+    print(sandwich)
