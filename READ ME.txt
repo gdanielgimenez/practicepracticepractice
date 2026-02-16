@@ -1,3 +1,9 @@
-compilation of (first draft mostly, and alternative) solutions to excercises from Python books.
+1.compilation of (first draft mostly, and alternative) solutions to excercises from Python books.
 mostly for practice purposes.
 
+2.
+
+Abreviations folders. 
+- PCC => Python crash course book.
+- ATBS => Automate the boring stuff with Python book.
+- LPTHD => Learn Python the hard way book.
