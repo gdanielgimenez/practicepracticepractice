@@ -1,4 +1,4 @@
-# all modules to work with the last round of chapter 9 excercises
+# all modules to work with the 4th round of chapter 9 excercises
 class Restaurant():
     """class to build a restaurant"""
 
