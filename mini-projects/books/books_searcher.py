@@ -23,7 +23,7 @@ book_titles = books_info[2:61]
 print(book_titles)
 # for title in book_titles:
 #    print(title)
-# print(len(book_titles))
+print(len(book_titles))
 
 active_search = True
 while active_search:
