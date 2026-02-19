@@ -1,3 +1,4 @@
+import json
 # list of books or dictionary
 books_info = []  # start with titles only
 book_titles = []
@@ -12,7 +13,7 @@ with open(filename) as file_object:
         # print(line)
         book = ([line.lower().split(",")])
         if '"' not in book[0][0]:
-            books_info.append(book[0][0])
+            books_info.append(book[0][0].replace(' ', ''))
     # print(books_info)
 # books_info has 66 lists items
 # print(books_info[2][0][0])
@@ -21,11 +22,13 @@ with open(filename) as file_object:
 # print(books_info)
 book_titles = books_info[2:61]
 print(book_titles)
-# for title in book_titles:
-#    print(title)
 print(len(book_titles))
-
-active_search = True
+# creating a csv file to store the current list
+file_storing = "books.json"
+with open(file_storing, 'w') as f_obj:
+    json.dump(book_titles, f_obj)
+# looking for books inside the list
+active_search = False
 while active_search:
     book_name = input(
         "Type the book title to check if it is already in the list : ")
