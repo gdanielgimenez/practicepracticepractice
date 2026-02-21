@@ -4,6 +4,7 @@
 import sys
 import pyperclip
 
+
 PASSWORDS = {'email': 'f7min987asdf98asd9f87a9987dfgh987dfgh98d7fg8h9',
              'blog': 'VMA741rfv8552gbyn85yu2',
              'luggage': '12345'}
