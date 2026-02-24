@@ -1,0 +1,7 @@
+Spec (not a full spec but a basic guideline of goals for the project.)
+    Web app called Learning Log that allows users to log the topics
+    they're interested in and make journal entries as they learn about
+    each topic. The Learning Log home page should describe the site
+    and invite users to log in or register. Once logged in a user
+    should be able to create new topics, add new entries, read and
+    edit exisint entries. 
