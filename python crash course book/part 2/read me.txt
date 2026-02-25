@@ -1,1 +1,5 @@
 Part 2 of the books coding along all the projects.
+
+DJANGO.
+    1. steps to start a new DJANGO projects.
+            =>

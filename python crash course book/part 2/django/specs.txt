@@ -5,3 +5,11 @@ Spec (not a full spec but a basic guideline of goals for the project.)
     and invite users to log in or register. Once logged in a user
     should be able to create new topics, add new entries, read and
     edit exisint entries. 
+
+=> To create a requirements.txt file that'll be useful when settip up the same project in another machine.
+        => pip freeze > requirements.txt
+
+=> Now when When setting up the project on a new machine or deployment server, you can install all the 
+required packages using the following command: => pip install -r requirements.txt
+
+ALL this is donde inside the virtual environment.
