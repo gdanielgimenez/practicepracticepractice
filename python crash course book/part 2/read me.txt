@@ -1,5 +1,23 @@
 Part 2 of the books coding along all the projects.
 
 DJANGO.
-    1. steps to start a new DJANGO projects.
-            =>
+    1. steps to start new DJANGO projects.
+            => write the specs + create the virtual environment with the command
+            => "python -m venv ll_env" 
+            (where "ll_env" is the name of the env)
+    
+    2. activate the virtual environment.
+            => "source ll_env/bin/activate" (for Linux based systems)
+            => "ll_env/Scripts/activate" (for Windows)
+
+    3. IN your activated vm install Django.
+            => pip install Django.
+
+    4. creating a project in Django.
+            => "django-admin.py startproject learning_log ." 
+            => "django-admin startproject learning_log ." (TESTED working fedora)
+    5. creating the database.
+            => "python manage.py migrate"
+    
+    6. start the server to check everything's working.
+            => "python manage.py runserver"
