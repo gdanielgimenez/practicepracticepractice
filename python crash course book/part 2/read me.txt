@@ -1,11 +1,32 @@
 Part 2 of the books coding along all the projects.
 
+* Important notes => the VE folder itself should Not be push or commit to git
+  instead we should recreate the environment if needed on different machines and
+  have a requirements.txt file (command on step one) + two other commands.
+  => python3 -m ll_env (where "ll_env" is the name of the ve to be created)
+  => source ll_env/bin/activate (or equivalent to activate ve)
+  => pip install -r requirements.txt
+
+steps regarding how to manage the db to be added at a later date after testing
+in other projects.
+
+Steps to take in a new machine to work with an existing Django project
+        => git clone <repo>
+        => cd into the project folder
+        => python3 -m ll_env
+        => source ll_env/bin/activate
+        => pip install -r requirements.txt
+        => python manage.py migrate # only if db.sqlit3 isn't on the repo
+        => python manage.py runserver
+
+
+---------------------------------------------------------------------------------
 DJANGO.
     1. steps to start new DJANGO projects.
             => write the specs + create the virtual environment with the command
-            => "python -m venv ll_env" 
+            => "python -m venv ll_env"
             (where "ll_env" is the name of the env)
-    
+
     2. activate the virtual environment.
             => "source ll_env/bin/activate" (for Linux based systems)
             => "ll_env/Scripts/activate" (for Windows)
@@ -14,10 +35,10 @@ DJANGO.
             => pip install Django.
 
     4. creating a project in Django.
-            => "django-admin.py startproject learning_log ." 
+            => "django-admin.py startproject learning_log ."
             => "django-admin startproject learning_log ." (TESTED working fedora)
     5. creating the database.
             => "python manage.py migrate"
-    
+
     6. start the server to check everything's working.
             => "python manage.py runserver"
