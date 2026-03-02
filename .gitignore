@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 
+# ignore ll_env folder 
+python crash course book/part 2/django/learning_log/ll_env
