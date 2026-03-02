@@ -42,3 +42,4 @@ DJANGO.
 
     6. start the server to check everything's working.
             => "python manage.py runserver"
+---------------------------------------------------------------------------------
