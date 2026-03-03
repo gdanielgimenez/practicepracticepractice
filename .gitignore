@@ -4,4 +4,5 @@ __pycache__/
 *.py[codz]
 
 .env
-
+# windows 
+'python crash course book/part 2/django/learning_log/ll_env/'

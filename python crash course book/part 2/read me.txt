@@ -42,3 +42,8 @@ DJANGO.
 
     6. start the server to check everything's working.
             => "python manage.py runserver"
+
+---------------------------------------------------------------------------------
+
+note : when rebuilding on Windows it needs to create SU: again
+        - python manage.py createsuperuser (and follow the steps prompt in the command line)
