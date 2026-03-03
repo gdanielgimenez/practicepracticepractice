@@ -22,7 +22,7 @@ Steps to take in a new machine to work with an existing Django project
 
 ---------------------------------------------------------------------------------
 DJANGO.
-    1. steps to start new DJANGO projects.
+    1. steps to start new DJANGO projects. (from root folder of learning_log)
             => write the specs + create the virtual environment with the command
             => "python -m venv ll_env"
             (where "ll_env" is the name of the env)
