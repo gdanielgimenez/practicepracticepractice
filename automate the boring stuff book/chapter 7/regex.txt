@@ -1,0 +1,4 @@
+Regular expressions or regex
+    Allow you to specify a pattern of text to search for.
+
+1. for example one finding patterns without regex, 
