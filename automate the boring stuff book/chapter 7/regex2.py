@@ -59,5 +59,80 @@ print(phoneNR)
 # \s     any space tab or newline (think of this as matching space)
 # \S     anything that is NOT space tab or newline
 
-# square brackets can be use to define shorthand versions of matches like [0-5]
+# square brackets can be use to define shorthand versions of custom matches like [0-5]
 # instead of writing (1|2|3|4|5) both will only match numbers between 0-5
+
+# we can create regex to fit whatever sort of need we have
+# given an example for a christmas presents list
+
+xmasRegex = re.compile(r'\d\s\w+')
+# this regex matches a string that starts with a digit (0-9) followed by space
+# and finally a "word" "00 something" would be a match
+presents = xmasRegex.findall(
+    '12 toys, 5 socks, 3 shirts, 2 phones, 1 computer')
+print(presents)
+
+# making your own character classes
+# REGEX for all vowels lowercase and uppercase
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+# we can also include ranges for letters or numbers by using a hyphen
+volNumRegex = re.compile(r'[a-zA-Z0-9]')
+# this character class regex will match all lower case and uppercase letters
+# from a to z and all numbers from 0  to 9
+# when we use square brackets to define class we dont need escape characters
+# the caret ^ caracter transforms a regular character class to a negative one
+# if we want to match all NON-vowels characters we would change our previous
+# example with a caret at the beginning like so
+nonVowelsRegex = re.compile(r'^[aeiouAEIOU]')
+
+# when we want to make an exact match from beginning to end both ^ $
+# the caret by it self signals ^\d what the string should begin with
+# and the $ by itself signals $\d we are looking for a match ending with
+# but when we combine the two it matches exactly a start and an end
+beginsHelloReg = re.compile(r'^Hello')
+thisPass = beginsHelloReg.search("Hello World")
+thisFails = beginsHelloReg.search("he said Hello")
+# for the $ match ending with a digit or more
+endsWithNum = re.compile(r'\d+$')
+thisPass = endsWithNum.search("Your number is 42")
+thisFails = endsWithNum.search("your number is forty two")
+#
+# when we combine the 2 ^ $
+wholeStringIsNum = re.compile(r'\d+$')
+# this regex matches strings that both begin and end with one or more numeric char
+# this pass '1234567890'
+# this fails '12345xyz890'
+# this also fails '12  3457890'
+
+# the wild character .(dot)
+# this regex matches words that have at
+atRegex = re.compile(r'.at')
+atat = atRegex.findall('The cat in the hat sat on the flat mat.')
+print(atat)
+# the . wildcard only matches one char thats why atat retunrs lat instea of flat
+
+# matching everything with Dot-Star
+# for a case where we would want to match something like the data from a
+# First Name: name Last Name : lastname situation
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
+mo = nameRegex.search('First Name: Al Last Name: Sweigart')
+# this would return Al Sweigart
+# where group1(Al) and group2(Sweigart)
+# the .* is greedy by default but we can change its behavior with ?
+#  greedy version r'<.*>'
+# will match '<To serve a man> for dinner.>'
+# non-greedy version r'<.*?>'
+# will match only '<To serve a man>'
+
+# matching new lines with Dot character
+noNewLineReg = re, compile('.*')
+# matches everything before a new line, which . doesnt include by default.
+newLineReg = re.compile('.*', re.DOTALL)
+# will match everything even new lines
+
+# case insensitive matches
+# re.IGNORECASE or re.i
+robocopRe = re.compile(r'roboco', re.i)
+robocopRe = re.compile(r'roboco', re.IGNORECASE)
+# no matter which of the two versions we use now we'll be able to match
+# robocop ROBOCOP Robocop RoBoCoP and everything in between
