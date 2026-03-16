@@ -136,3 +136,5 @@ robocopRe = re.compile(r'roboco', re.i)
 robocopRe = re.compile(r'roboco', re.IGNORECASE)
 # no matter which of the two versions we use now we'll be able to match
 # robocop ROBOCOP Robocop RoBoCoP and everything in between
+# have into account that when we look for insensitive-case we get returned exactly
+#  whats already in the string
